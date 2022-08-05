@@ -11,6 +11,6 @@
 ![Project-07 Preview](./Project-07.png)
 
 I deployed the project on **Netlify**:
-- You can preview the project here, [**Product Home Page**]()
+- You can preview the project here, [**Product Home Page**](https://product-home-page-7.netlify.app/)
 
 

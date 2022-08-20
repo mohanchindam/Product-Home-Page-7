@@ -1,4 +1,8 @@
-*{
+/* $desktop:1200px;-xl
+$laptop:992px;-lg
+$tablet:768;-md
+$phone:480;-sm */
+*,*::after,*::before{
     padding: 0;
     margin: 0;
     outline:0;
@@ -31,6 +35,7 @@ nav{
     color: #FE5E35;
     font-weight: 900 !important;
 }
+
 img[alt="logo"]{
    height: 37px;
 }
@@ -38,13 +43,46 @@ img[alt="actions"]{
     height: 40px;
     align-items: flex-start;
 }
+/* media query */
+@media screen and (max-width:992px){
+    .nav-items{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+    nav{
+        padding-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 0;
+        align-items: center;
+        width: 80px;
+        margin: 0 auto;
+    }
+    img[alt="logo"]{
+        margin-bottom: 2px;
+     }
+    
+}
 .intro-section{
+    width: 100%;
     display: flex;
     font-family: 'Poppins';
 }
+/* media query */
+@media screen and (max-width:992px){
+    .intro-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding-top: 0;
+    }
+}
 .left-section{
     /* border: 2px solid; */
-    height: 100%;
+    /* height: 100%; */
     margin-left: 30px;
     margin-top: 100px;
 }
@@ -52,6 +90,16 @@ img[alt="circles"]{
     display: inline-block;
     height: 35px;
     /* margin-top: 10px; */
+}
+/* media query */
+@media screen and (max-width:992px){
+    .left-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .left-section>h3{
     font-size: 35px;
@@ -100,6 +148,30 @@ img[alt="plus"]{
     border-radius: 40px;
     margin-right: 20px;
 }
+/* media query */
+@media screen and (max-width:992px){
+    .sub-headlines{
+        margin: 0;
+        margin-left: 50px;
+        font-size: 15px;
+    }
+    .left-section>h1{
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+    }
+    .left-section>h3{
+        font-size: 25px;
+        text-align: center;
+        width: 100%;
+    }
+    .text{
+        text-align: center;
+        max-width: 400px;
+    }
+}
+
+
 .right-section{
     position: relative;
     top:-20px;
@@ -111,6 +183,7 @@ img[alt="headphone"]{
     left:110px;
     z-index: -1;
 }
+
 .discount{
     position: absolute;
     top: 50%;
@@ -162,4 +235,46 @@ img[alt="headphone"]{
     position: relative;
     top:96%;
     left: 160%;
+}
+/* media query */
+@media screen and (max-width:992px){
+    .right-section{
+        position: static;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        padding-left: 60px;
+    }
+    img[alt="headphone"]{
+        position: static;
+        margin-top: 25px;
+        max-height: 400px;
+    }
+.headphone-div{
+    position: relative;
+    
+}
+.discount{
+    max-height: 120px;
+    left:-25px;
+    top:60%;
+}
+.discount-content{
+    top: 65%;
+    left:0;
+    font-size: smaller;
+}
+.dots{
+    position: static;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.right-section .action-btn{
+    position:static;
+    margin: 0 auto;
+}
+
 }
